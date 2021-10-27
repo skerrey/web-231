@@ -27,12 +27,14 @@
             <button type="button" id="btnMyCourse">
                 What course am I taking?
             </button>
-            <p class="" id="txtMyWorld"></p>
+            <p id="txtMyWorld"></p>
             <a href="../index.html" class="return-home">Return</a>
         </div>
         <script>
+            // Calls paragraph id "txtMyWorld" to import string value
             document.getElementById("txtMyWorld").innerHTML = "You are now in Seth Kerrey's world!";
 
+            // Click EventListener to alert string value for id of "btnMyCourse" button
             document.getElementById("btnMyCourse").addEventListener("click", function() {
                 alert("WEB 231 - Enterprise JavaScript I.")
             });
