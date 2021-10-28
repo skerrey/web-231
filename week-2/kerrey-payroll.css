@@ -1,0 +1,16 @@
+/*
+============================================
+; Title: Assignment 2.3 - Values and Variables
+; File Name: kerrey-payroll.css
+; Author: Professor Krasso
+; Date: 10/28/2021
+; Modified By: Seth Kerrey
+; Description: This program demonstrates the
+; use of JavaScript types, values, and
+; variables in an application.
+;===========================================
+*/
+
+ul {
+    border: 1px dotted red;
+}
