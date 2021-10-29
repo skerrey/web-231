@@ -11,6 +11,7 @@
 ;===========================================
 */
 
+/* Employee info border */
 ul {
     border: 1px dotted red;
 }
