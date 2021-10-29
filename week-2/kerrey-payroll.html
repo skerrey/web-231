@@ -54,5 +54,51 @@
             </ul>
             <a href="../index.html" class="return-home">Return</a>
         </div>
+        <script>
+            // Defining variables and their values
+            let txtFirstNameLudgwig = "Ludgwig";
+            let txtFirstNameJohann = "Johann";
+            let txtFirstNameWolfgang = "Wolfgang";
+
+            let txtLastNameBeethoven = "Beethoven";
+            let txtLastNameBach = "Bach";
+            let txtLastNameMozart = "Mozart";
+
+            let txtAddressLudgwig = "505 main street";
+            let txtAddressJohann = "512 main street";
+            let txtAddressWolfgang = "600 main street";
+
+            // Get local date as a string
+            let txtHireDateLudgwig = new Date().toLocaleDateString("en-US");
+            let txtHireDateJohann = new Date().toLocaleDateString("en-US");
+            let txtHireDateWolfgang = new Date().toLocaleDateString("en-US");
+
+            // Use toFixed() to round to 1 decimal place
+            let txtPayRateLudgwig = 18.92322.toFixed(1);
+            let txtPayRateJohann = 25.52342.toFixed(1);
+            let txtPayRateWolfgang = 50.1123.toFixed(1);
+
+            // Input variables value into HTML using DOM
+            document.getElementById("txtFirstNameLudgwig").innerHTML = txtFirstNameLudgwig;
+            document.getElementById("txtFirstNameJohann").innerHTML = txtFirstNameJohann;
+            document.getElementById("txtFirstNameWolfgang").innerHTML = txtFirstNameWolfgang;
+
+            document.getElementById("txtLastNameBeethoven").innerHTML = txtLastNameBeethoven;
+            document.getElementById("txtLastNameBach").innerHTML = txtLastNameBach;
+            document.getElementById("txtLastNameMozart").innerHTML = txtLastNameMozart;
+
+            document.getElementById("txtAddressLudgwig").innerHTML = txtAddressLudgwig;
+            document.getElementById("txtAddressJohann").innerHTML = txtAddressJohann;
+            document.getElementById("txtAddressWolfgang").innerHTML = txtAddressWolfgang;
+
+            document.getElementById("txtPayRateLudgwig").innerHTML = txtPayRateLudgwig;
+            document.getElementById("txtPayRateJohann").innerHTML = txtPayRateJohann;
+            document.getElementById("txtPayRateWolfgang").innerHTML = txtPayRateWolfgang;
+
+            document.getElementById("txtHireDateLudgwig").innerHTML = txtHireDateLudgwig;
+            document.getElementById("txtHireDateJohann").innerHTML = txtHireDateJohann;
+            document.getElementById("txtHireDateWolfgang").innerHTML = txtHireDateWolfgang;
+            
+        </script>
     </body>
 </html>
