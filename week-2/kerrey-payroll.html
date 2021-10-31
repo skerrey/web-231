@@ -20,9 +20,8 @@
             Author: Professor Krasso
             Date: 10/28/201
             Modified By: Seth Kerrey
-            Description: This program demonstrates the 
-            use of JavaScript types, values, and 
-            variables in an application.
+            Description: HTML and JavaScript file that
+            shows how to define variables.
         -->
     </head>
     <body>
@@ -30,7 +29,7 @@
             <h1 id="payroll-header">Payroll System</h1>
             <h3>Employee record 1</h3>
             <ul>
-                <!-- Employee 1 Info: Ludgwig Beethoven. -->
+                <!-- Employee 1 Info: Ludgwig Beethoven -->
                 <li id="txtFirstNameLudgwig"></li>
                 <li id="txtLastNameBeethoven"></li>
                 <li id="txtAddressLudgwig"></li>
@@ -39,7 +38,7 @@
             </ul>
             <h3>Employee record 2</h3>
             <ul>
-                <!-- Employee 2 Info: Johann Bach. -->
+                <!-- Employee 2 Info: Johann Bach -->
                 <li id="txtFirstNameJohann"></li>
                 <li id="txtLastNameBach"></li>
                 <li id="txtAddressJohann"></li>
@@ -48,7 +47,7 @@
             </ul>
             <h3>Employee record 3</h3>
             <ul>
-                <!-- Employee 3 Info: Wolfgang Mozart. -->
+                <!-- Employee 3 Info: Wolfgang Mozart -->
                 <li id="txtFirstNameWolfgang"></li>
                 <li id="txtLastNameMozart"></li>
                 <li id="txtAddressWolfgang"></li>
@@ -58,56 +57,65 @@
             <a href="../index.html" class="return-home">Return</a>
         </div>
         <script>
-            // Defining variables and their values.
-            // firstName variables.
+            /**
+            * Defining variables and their values
+            * firstName variables
+            */ 
             let txtFirstNameLudgwig = "Ludgwig";
             let txtFirstNameJohann = "Johann";
             let txtFirstNameWolfgang = "Wolfgang";
             
-            // lastName variables.
+            // lastName variables
             let txtLastNameBeethoven = "Beethoven";
             let txtLastNameBach = "Bach";
             let txtLastNameMozart = "Mozart";
 
-            // address variables.
+            // address variables
             let txtAddressLudgwig = "505 main street";
             let txtAddressJohann = "512 main street";
             let txtAddressWolfgang = "600 main street";
 
-            // Get local date as a string.
-            // hireDate variables.
+            /** 
+            * Get local date as a string
+            * hireDate variables
+            */ 
             let txtHireDateLudgwig = new Date().toLocaleDateString("en-US");
             let txtHireDateJohann = new Date().toLocaleDateString("en-US");
             let txtHireDateWolfgang = new Date().toLocaleDateString("en-US");
 
-            // Use toFixed() to round to 1 decimal place.
-            // payRate variables.
+            /** 
+            * Use toFixed() to round to 1 decimal place
+            * payRate variables
+            */
             let txtPayRateLudgwig = 18.92322.toFixed(1);
             let txtPayRateJohann = 25.52342.toFixed(1);
             let txtPayRateWolfgang = 50.1123.toFixed(1);
 
-            // Input variables value into HTML using DOM.
-            // firstName variables.
+            /**
+            * Input variables value into HTML using DOM
+            * firstName variables
+            */
+            
             document.getElementById("txtFirstNameLudgwig").innerHTML = txtFirstNameLudgwig;
             document.getElementById("txtFirstNameJohann").innerHTML = txtFirstNameJohann;
             document.getElementById("txtFirstNameWolfgang").innerHTML = txtFirstNameWolfgang;
 
-            // lastName variables.
+            // lastName variables
             document.getElementById("txtLastNameBeethoven").innerHTML = txtLastNameBeethoven;
             document.getElementById("txtLastNameBach").innerHTML = txtLastNameBach;
             document.getElementById("txtLastNameMozart").innerHTML = txtLastNameMozart;
 
-            // address variables.
+            // address variables
             document.getElementById("txtAddressLudgwig").innerHTML = txtAddressLudgwig;
             document.getElementById("txtAddressJohann").innerHTML = txtAddressJohann;
             document.getElementById("txtAddressWolfgang").innerHTML = txtAddressWolfgang;
 
-            // payRate variables.
+            // payRate variables
             document.getElementById("txtPayRateLudgwig").innerHTML = txtPayRateLudgwig;
             document.getElementById("txtPayRateJohann").innerHTML = txtPayRateJohann;
             document.getElementById("txtPayRateWolfgang").innerHTML = txtPayRateWolfgang;
 
-            // hireDate variables.
+            // hireDate variables
             document.getElementById("txtHireDateLudgwig").innerHTML = txtHireDateLudgwig;
             document.getElementById("txtHireDateJohann").innerHTML = txtHireDateJohann;
             document.getElementById("txtHireDateWolfgang").innerHTML = txtHireDateWolfgang;
