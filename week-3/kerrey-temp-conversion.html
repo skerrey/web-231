@@ -3,7 +3,8 @@
     <head>
         <title>WEB 231 – Enterprise JavaScript I</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="kerrey-temp-conversion.css">
+        <link rel="stylesheet" type="text/css" href="../global.css">
+        <link rel="stylesheet" type="text/css" href="kerrey-temp-conversion.css">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,7 @@
             Author: Professor Krasso
             Date: 11/2/201
             Modified By: Seth Kerrey
+            Sources: https://github.com/buwebdev/web-231
             Description: Eperimenting with JavaScript onclick
             events and reading values from input fields through
             a simple temperature conversion application. 
@@ -23,26 +25,35 @@
     </head>
     <body>
         <div id="container">
-            <h1 id="app-header">Welcome to the Temperature Conversion App!</h1>
+            <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
             
+            <div id="card-container">
                 <div class="card">
                     <div class="card-title">Fahrenheit to Celcius Converter</div>
                     <div class="card-content">
-                        <div class="form-field">
-                            <label for="txtFahrenheit">Fahrenheit value:</label>
-                            <input type="text" class="input" id="txtFahrenheit" name="fahrenheit">
+                        <div class="form">
+                            <div class="form-field">
+                                <label for="txtFahrenheit">Fahrenheit value:</label>
+                                <input type="text" class="input" id="txtFahrenheit" name="fahrenheit">
+                            </div>
+
                             <div class="form-field">
                                 <button class="btn btn-primary full-width">Convert Temperature</button>
                             </div>
-                        </div>
-    
-
+                        </div>                        
                     </div>
                 </div>
-            
+            </div>
+
         </div>
+        
         <script>
-            
+             
+            document.getElementById("btnSubmit").onclick = function() {
+                let payRate = document.getElementById("txtPayRate").value;
+                alert(`Your pay rate is: ${payRate}`)
+            }
+
         </script>
     </body>
 </html>
