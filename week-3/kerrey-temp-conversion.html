@@ -34,24 +34,32 @@
                         <div class="form">
                             <div class="form-field">
                                 <label for="txtFahrenheit">Fahrenheit value:</label>
-                                <input type="text" class="input" id="txtFahrenheit" name="fahrenheit">
+                                <input type="text" class="input" id="txtFahrenheit" name="fahrenheit" />
                             </div>
 
                             <div class="form-field">
-                                <button class="btn btn-primary full-width">Convert Temperature</button>
+                                <button class="btn btn-primary full-width" onclick="myFunction()">Convert Temperature</button>
                             </div>
                         </div>                        
                     </div>
                 </div>
             </div>
 
+            <div id="form-results-conversion">
+                <div class="card">
+                    <div class="card-title">Conversion Results</div>
+                    <div class="card-content">
+                        Results from the form submission will go here...
+                    </div>
+                </div>
+            </div>
         </div>
         
         <script>
-             
-            document.getElementById("btnSubmit").onclick = function() {
-                let payRate = document.getElementById("txtPayRate").value;
-                alert(`Your pay rate is: ${payRate}`)
+            function myFunction () {
+                let fahrenheit = document.getElementById("txtFahrenheit").value;
+                let celsius = (fahrenheit - 32) / 1.8;
+                document.getElementById("form-results-conversion").innerHTML = celsius.toFixed(2);
             }
 
         </script>
