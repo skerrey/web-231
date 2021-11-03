@@ -8,3 +8,8 @@
 ; Description: Styling for the kerrey-temp-conversion.html file.
 ;===========================================
 */
+
+#container {
+    padding: 10px;
+}
+
