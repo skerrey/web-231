@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="form-field">
-                                <button class="btn btn-primary full-width" onclick="tempConversion()">Convert Temperature</button>
+                                <button class="btn btn-primary full-width" id="btnSubmit">Convert Temperature</button>
                             </div>
                         </div>                        
                     </div>
@@ -54,12 +54,13 @@
                 </div>
             </div>
         </div>
-        
+        <a href="../index.html" class="return-home">Return</a>
+
         <script>
-            function tempConversion () {
+            document.getElementById("btnSubmit").onclick = function() {
                 let fahrenheit = document.getElementById("txtFahrenheit").value;
-                let celsius = (fahrenheit - 32) / 1.8;
-                document.getElementById("form-results-conversion").innerHTML = celsius.toFixed(2);
+                let results = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+                document.getElementById("form-results-conversion").innerHTML = results;
             }
 
         </script>
