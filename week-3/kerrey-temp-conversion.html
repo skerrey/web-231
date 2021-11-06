@@ -49,7 +49,7 @@
                 <div class="card">
                     <div class="card-title">Conversion Results</div>
                     <div class="card-content">
-                        Results from the form submission will go here...
+                        <div id="conversion-results"></div>
                     </div>
                 </div>
             </div>
@@ -57,10 +57,18 @@
         <a href="../index.html" class="return-home">Return</a>
 
         <script>
+
+            // Register onclick event
             document.getElementById("btnSubmit").onclick = function() {
+
+                // Capture inputted value from txtFahrenheit & assigned to variable fahreinheit
                 let fahrenheit = document.getElementById("txtFahrenheit").value;
+
+                // Assigned variable results to Fahrenheit to Celsius formula with only two decimal places
                 let results = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
-                document.getElementById("form-results-conversion").innerHTML = results;
+                
+                // Variable results are outputted by binded to conversion-results id
+                document.getElementById("conversion-results").innerHTML = results;
             }
 
         </script>
