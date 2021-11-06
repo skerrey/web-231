@@ -14,30 +14,13 @@
     padding: 10px;
 }
 
-#card-example {
+#card-container {
     width: 600px;
     margin: 3% auto 0;
 }
 
-#container {
-    padding: 10px;
-}
-
-#form-example {
-    width: 600px;
-    margin: 3% auto 0;
-}
-
-#form-results-example {
-    width: 600px;
-    margin: 3% auto 0;
-}
-
-#container {
-    padding: 10px;
-}
-
-#form-example {
-    width: 600px;
-    margin: 3% auto 0;
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    text-align: center;
+    font-size: 28px;
 }
