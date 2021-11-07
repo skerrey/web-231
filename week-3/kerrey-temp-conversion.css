@@ -18,3 +18,13 @@ body {
 #conversion-results {
     text-align: center;
 }
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
