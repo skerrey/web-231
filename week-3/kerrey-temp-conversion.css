@@ -10,17 +10,11 @@
 ;===========================================
 */
 
-#container {
-    padding: 10px;
-}
-
-#card-container {
-    width: 600px;
-    margin: 3% auto 0;
-}
-
 body {
-    font-family: 'Oswald', Verdana, Arial, sans-serif;
-    text-align: center;
     font-size: 28px;
+    padding-left: 20px;
+}
+
+#conversion-results {
+    text-align: center;
 }
