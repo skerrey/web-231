@@ -1,0 +1,30 @@
+/*
+============================================
+; Title: Assignment 4.2 - Number Guessing Game
+; File Name: kerrey-number-game.html
+; Author: Professor Krasso
+; Date: 11 November 2021
+; Modified By: Seth Kerrey
+; Description: Styling for the 
+; kerrey-number-game.html file
+===========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
