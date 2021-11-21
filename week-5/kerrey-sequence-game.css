@@ -1,0 +1,32 @@
+/*
+============================================
+; Title: Assignment 5.2 - Sequence Game
+; File Name: kerrey-sequence-game.css
+; Author: Professor Krasso
+; Date: 21 November 2021
+; Modified By: Seth Kerrey
+; Description: 
+;   Styling for the 
+;   kerrey-sequence-game.html file
+; Resources: 
+;   CSS style came from guidance in the assignment instructions & style guide
+===========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
