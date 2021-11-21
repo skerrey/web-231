@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+============================================
+; Title: Assignment 5.2 - Sequence Game
+; File Name: kerrey-sequence-game.html
+; Author: Professor Krasso
+; Date: 21 November 2021
+; Modified By: Seth Kerrey
+; Description: 
+    An exercise of exploration of JavScript
+;   control statements by practicing for loops, 
+;   while loops, and do...while loops.
+; Resources:
+;   The classes and id's were taken from the CSS style guide & 
+;       "Web 231 Assign_5.docx" provided by Prof Krasso.
+;   JavaScript code was taken from "WEB 231 Assign_5.docx" 
+;       Loop variable names "num1, num2, next" provided by Prof Krasso.
+;       Slice method provided by Prof Krasso.
+;   W3School HTML Form Elements
+;       https://www.w3schools.com/html/html_form_elements.asp
+;   W3School Window alert() Method
+;       https://www.w3schools.com/jsref/met_win_alert.asp
+;   W3School While Loop
+;       https://www.w3schools.com/js/js_loop_while.asp
+;   W3School For Loop
+;       https://www.w3schools.com/js/js_loop_for.asp
+;   W3School Do While
+;       https://www.w3schools.com/jsref/jsref_dowhile.asp
+
+
+===========================================
+-->
+<html lang="en">
+    <head>
+
+        <title>WEB 231 – Enterprise JavaScript I</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../global.css">
+        <link rel="stylesheet" href="kerrey-sequence-game.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div id="container">
+
+            <h1 id="app-header">Welcome to the sequence game!</h1>
+
+            <!-- Card container for user input -->
+            <div id="card-container">
+
+                <div class="card">
+                    <div class="card-title">Sequence Selection Form</div>
+                    <div class="card-content">
+                        <div class="form">
+
+                            <!-- Form for input -->
+                            <div class="form-field">
+                                <label for="txtSequenceList">Choose a number sequence:</label>
+                                <select name="drop-down-menu" class="drop-down-menu" id="sequence">
+                                    <option value="select">--Select--</option>
+                                    <option value="fibonacci">Fibonacci Sequence</option>
+                                    <option value="even">Even Numbers</option>
+                                    <option value="odd">Odd Numbers</option>
+                                </select>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-field">
+                                <button class="btn btn-primary full-width" id="btnDisplaySequence">Display Sequence</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Card container for output -->
+            <div id="form-results">
+                <div class="card">
+                    <div class="card-title">Sequence Results</div>
+                    <div class="card-content">
+                        <div id="sequence-results"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Return link to landing page -->
+        <a href="../index.html" class="return-home">Return</a>
+
+        <script>
+           
+            // Register onclick event
+            document.getElementById("btnDisplaySequence").onclick = function() {
+
+                // Capture inputted value from selection ID & assign to variable choice
+                let choice = document.getElementById("sequence").value;
+
+                // if else if else statement used to display different results of sequence id options
+                if (choice === "fibonacci") {
+                    
+                    // Variables for while loop
+                    let num1 = 0;
+                    let num2 = 1; 
+                    let next;
+                    let fibonacciSequenceText = "";
+
+                    // While loop for fibonacci sequence < 40
+                    while (num1 < 40) {
+                        fibonacciSequenceText = fibonacciSequenceText + num1 + ", ";
+                        next = num1 + num2;
+                        num1 = num2;
+                        num2 = next;
+                    }
+
+                    // Output test while loop
+                    // Expected output 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+                    console.log("while - fibonacci - " + fibonacciSequenceText); 
+                    // Bind fibonacciSequenceText to sequence-results id
+                    document.getElementById("sequence-results").innerHTML = fibonacciSequenceText.slice(0, -2);
+
+                } else if (choice === "even") {
+                    
+                    // Variables for do...while loop
+                    let evenSequenceText = "";
+                    let num1 = 0;
+
+                    // Do...while loop for even sequence < 20
+                    do {
+                        num1 = num1 + 2;
+                        evenSequenceText = evenSequenceText + num1 + ", ";
+                    } while (num1 < 20);
+
+                    // Output test do...while loop
+                    // Expected output 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+                    console.log("do while - even - " + evenSequenceText); 
+                    // Bind evenSequenceText to sequence-results id
+                    document.getElementById("sequence-results").innerHTML = evenSequenceText.slice(0, -2);
+
+                } else if (choice === "odd") {
+
+                    // Variable for for loop
+                    let oddSequenceText = "";
+
+                    // For loop for odd sequence < 20
+                    for (let num1 = 1; num1 < 20; num1 = num1 + 2) {
+                        oddSequenceText = oddSequenceText + num1 + ", ";
+                    }
+
+                    // Output test for loop
+                    // Expected output 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+                    console.log("for - odd " + oddSequenceText); 
+                    // Bind oddSequenceText to sequence-results id
+                    document.getElementById("sequence-results").innerHTML =  oddSequenceText.slice(0, -2);
+
+                } else {
+                    
+                    // Alert for invalid selection
+                    alert("Invalid selection, please try again!");
+
+                }
+            }
+        </script>
+    </body>
+</html>
