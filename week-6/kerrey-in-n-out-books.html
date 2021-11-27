@@ -14,8 +14,9 @@
 ;   object literals by creating an application
 ;   called In-N-Out-Books.
 ; Resources:
-;   The classes and id's were taken from the CSS style guide & 
-;       "Web 231 Assign_6.docx" provided by Prof Krasso.
+;   The classes and id's were taken from the CSS style guide: 
+;       "Web 231 Assign_6.docx" provided by Prof Krasso
+;       https://github.com/buwebdev/web-231/tree/master/week-0 
 ;   JavaScript code was taken from "WEB 231 Assign_6.docx" 
 ;       
 
@@ -65,7 +66,7 @@
 
             </div>
 
-            <!-- Card container for output -->
+            <!-- Card container for output
             <div id="form-results">
                 <div class="card">
                     <div class="card-title">Sequence Results</div>
@@ -73,7 +74,7 @@
                         <div id="sequence-results"></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
@@ -82,6 +83,38 @@
 
         <script>
            
+            const favoriteBook1 = {
+                isbn: "0593497481",
+                title: "Foundations",
+                pages: 272
+            }
+            const favoriteBook2 = {
+                isbn: "0553382586",
+                title: "Foundation and Empire",
+                pages: 272
+            }
+            const favoriteBook3 = {
+                isbn: "0553382594",
+                title: "Second Foundation",
+                pages: 272
+            }
+
+            const favoriteAuthor1 = {
+                name: "Isaac Asimov",
+                genre: "Science Fiction"
+            }
+            const favoriteAuthor2 = {
+                name: "J.K. Rowling",
+                genre: "Fantasy"
+            }
+            const favoriteAuthor3 = {
+                name: "Stephen King",
+                genre: "Science Fiction"
+            }
+
+            let books = document.getElementById("favorite-books");
+            let authors = document.getElementById("favorite-authors");
+
             // Register onclick event
             document.getElementById("btnDisplayListing").onclick = function() {
 
