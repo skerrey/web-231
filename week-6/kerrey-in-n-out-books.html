@@ -19,7 +19,6 @@
 ;       https://github.com/buwebdev/web-231/tree/master/week-0 
 ;   JavaScript code was taken from "WEB 231 Assign_6.docx" 
 ;       dot notation was provided by Prof Krasso
-;   
 ;   W3Schools JavaScript Objects
 ;       https://www.w3schools.com/js/js_objects.asp
 ;   MDN Grammar and Types
@@ -74,23 +73,67 @@
             </div>
 
             <!-- Card container for output of books id -->
-            <div id="books">
-                <!-- <div class="card">
-                    <div class="card-title">Top 3 Favorite Authors</div>
+            <div id="favorite-books">
+                <div class="card">
+                    <div class="card-title">Top 3 Favorite Books</div>
                     <div class="card-content">
                         
+                        <!-- Table for favorite books -->
+                        <table id="books-table">
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Title</th>
+                                <th>Pages</th>
+                            </tr>
+                            <tr>
+                                <td id="txtFoundationsISBN"></td>
+                                <td id="txtFoundationsTitle"></td>
+                                <td id="txtFoundationsPages"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtFoundationAndEmpireISBN"></td>
+                                <td id="txtFoundationAndEmpireTitle"></td>
+                                <td id="txtFoundationAndEmpirePages"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtSecondFoundationISBN"></td>
+                                <td id="txtSecondFoundationTitle"></td>
+                                <td id="txtSecondFoundationPages"></td>
+                            </tr>
+                        </table>
+
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <!-- Card container for output of authors id -->
-            <div id="authors">
-                <!-- <div class="card">
+            <div id="favorite-authors">
+                <div class="card">
                     <div class="card-title">Top 3 Favorite Authors</div>
                     <div class="card-content">
-                        
+
+                        <!-- Table for favorite authors -->
+                        <table id="authors-table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Genre</th>
+                            </tr>
+                            <tr>
+                                <td id="txtAsimovName"></td>
+                                <td id="txtAsimovGenre"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtRowlingName"></td>
+                                <td id="txtRowlingGenre"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtKingName"></td>
+                                <td id="txtKingGenre"></td>
+                            </tr>
+                        </table>
+
                     </div>
-                </div> -->
+                </div>
             </div>
 
         </div>
@@ -100,7 +143,7 @@
 
         <script>
            
-           // Object literals for favorite books
+            // Object literals for favorite books
             const favoriteBook1 = {
                 isbn: "0593497481",
                 title: "Foundations",
@@ -131,6 +174,34 @@
                 genre: "Science Fiction"
             }
 
+            // Bind object literal favoriteBook1 to "favorite-books" table cells
+            document.getElementById("txtFoundationsISBN").innerHTML = favoriteBook1.isbn;
+            document.getElementById("txtFoundationsTitle").innerHTML = favoriteBook1.title;
+            document.getElementById("txtFoundationsPages").innerHTML = favoriteBook1.pages;
+
+            // Bind object literal favoriteBook2 to "favorite-books" table cells
+            document.getElementById("txtFoundationAndEmpireISBN").innerHTML = favoriteBook2.isbn;
+            document.getElementById("txtFoundationAndEmpireTitle").innerHTML = favoriteBook2.title;
+            document.getElementById("txtFoundationAndEmpirePages").innerHTML = favoriteBook2.pages;
+
+            // Bind object literal favoriteBook2 to "favorite-books" table cells
+            document.getElementById("txtSecondFoundationISBN").innerHTML = favoriteBook3.isbn;
+            document.getElementById("txtSecondFoundationTitle").innerHTML = favoriteBook3.title;
+            document.getElementById("txtSecondFoundationPages").innerHTML = favoriteBook3.pages;
+
+            // Bind object literal favoriteAuthor1 to "favorite-authors" table cells
+            document.getElementById("txtAsimovName").innerHTML = favoriteAuthor1.name;
+            document.getElementById("txtAsimovGenre").innerHTML = favoriteAuthor1.genre;
+
+            // Bind object literal favoriteAuthor2 to "favorite-authors" table cells
+            document.getElementById("txtRowlingName").innerHTML = favoriteAuthor2.name;
+            document.getElementById("txtRowlingGenre").innerHTML = favoriteAuthor2.genre;
+
+            // Bind object literal favoriteAuthor3 to "favorite-authors" table cells
+            document.getElementById("txtKingName").innerHTML = favoriteAuthor3.name;
+            document.getElementById("txtKingGenre").innerHTML = favoriteAuthor3.genre;
+
+
             // Assign variables to divs
             let books = document.getElementById("favorite-books");
             let authors = document.getElementById("favorite-authors");
@@ -138,8 +209,6 @@
             // Dot notation for styling of books and authors variables
             books.style.display = "none";
             authors.style.display = "none";
-
-            document.getElementById("books").innerHTML = "fish"
             
 
             // Register onclick event
@@ -150,17 +219,22 @@
 
                 // if else if else statement used to display different results of favoriteList id options
                 if (choice === "books") {
-
+                    
+                    console.log("else - books"); // test books
                     books.style.display = "block";
+                    authors.style.display = "none";
 
                 } else if (choice === "authors") {
                     
+                    console.log("else - authors"); // test authors
+                    books.style.display = "none";
                     authors.style.display = "block";
 
                 } else if (choice === "select") {
-                    
-                   books.style.display = "none";
-                   authors.style.display = "none";
+                
+                    console.log("else - select"); // test select
+                    books.style.display = "none";
+                    authors.style.display = "none";
 
                 }
             }
