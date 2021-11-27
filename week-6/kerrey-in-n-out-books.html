@@ -18,7 +18,14 @@
 ;       "Web 231 Assign_6.docx" provided by Prof Krasso
 ;       https://github.com/buwebdev/web-231/tree/master/week-0 
 ;   JavaScript code was taken from "WEB 231 Assign_6.docx" 
-;       
+;       dot notation was provided by Prof Krasso
+;   
+;   W3Schools JavaScript Objects
+;       https://www.w3schools.com/js/js_objects.asp
+;   MDN Grammar and Types
+;       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
+;   W3Schools HTML Tables
+;       https://www.w3schools.com/html/html_tables.asp
 
 ===========================================
 -->        
@@ -66,15 +73,25 @@
 
             </div>
 
-            <!-- Card container for output
-            <div id="form-results">
-                <div class="card">
-                    <div class="card-title">Sequence Results</div>
+            <!-- Card container for output of books id -->
+            <div id="books">
+                <!-- <div class="card">
+                    <div class="card-title">Top 3 Favorite Authors</div>
                     <div class="card-content">
-                        <div id="sequence-results"></div>
+                        
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
+
+            <!-- Card container for output of authors id -->
+            <div id="authors">
+                <!-- <div class="card">
+                    <div class="card-title">Top 3 Favorite Authors</div>
+                    <div class="card-content">
+                        
+                    </div>
+                </div> -->
+            </div>
 
         </div>
 
@@ -83,6 +100,7 @@
 
         <script>
            
+           // Object literals for favorite books
             const favoriteBook1 = {
                 isbn: "0593497481",
                 title: "Foundations",
@@ -99,6 +117,7 @@
                 pages: 272
             }
 
+            // Object literals for favorite authors
             const favoriteAuthor1 = {
                 name: "Isaac Asimov",
                 genre: "Science Fiction"
@@ -112,27 +131,36 @@
                 genre: "Science Fiction"
             }
 
+            // Assign variables to divs
             let books = document.getElementById("favorite-books");
             let authors = document.getElementById("favorite-authors");
+
+            // Dot notation for styling of books and authors variables
+            books.style.display = "none";
+            authors.style.display = "none";
+
+            document.getElementById("books").innerHTML = "fish"
+            
 
             // Register onclick event
             document.getElementById("btnDisplayListing").onclick = function() {
 
-                // Capture inputted value from selection ID & assign to variable choice
+                // Capture inputted value from favoriteList id & assign to variable choice
                 let choice = document.getElementById("favoriteList").value;
 
-                // if else if else statement used to display different results of sequence id options
+                // if else if else statement used to display different results of favoriteList id options
                 if (choice === "books") {
-                    
-                  
+
+                    books.style.display = "block";
 
                 } else if (choice === "authors") {
                     
+                    authors.style.display = "block";
 
-                } else {
+                } else if (choice === "select") {
                     
-                    // Alert for invalid selection
-                    alert("Invalid selection, please try again!");
+                   books.style.display = "none";
+                   authors.style.display = "none";
 
                 }
             }
