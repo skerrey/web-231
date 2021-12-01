@@ -38,7 +38,8 @@ class Products {
     this.description = description;
     this.price = price;
     this.quantity = quantity;
-    this.totalValue = this.totalValue;
+    this.totalValue = this.price * this.quantity; //Multiplication for totalValue
+    this.totalValue = this.totalValue.toFixed(2); //totalValue to 2 decimal points
   } 
 }
 
@@ -79,7 +80,8 @@ const service1 = new Services("100", "Website Design", 150.0001, 25); //Test of 
 const service2 = new Services("101", "DevOps Consulting", 125.00, 50);
 const service3 = new Services("102", "Database Design", 125.00, 15);
 
-console.log("Test hourlyRate.toFixed(2) = " + service1.hourlyRate); //Output test
+//Output test - expected output 150.00
+console.log("Test hourlyRate.toFixed(2) = " + service1.hourlyRate);
 
 // create new employees objects from Employees class and assigned to 5 separate variables
 const employee1 = new Employees("1007", "Beethoven", "Ludwig", 13.99);
@@ -169,26 +171,34 @@ document.getElementById("btnDisplayListing").onclick = function() {
   document.getElementById("txtDescriptionProducts1").innerHTML = product1.description;
   document.getElementById("txtPriceProducts1").innerHTML = product1.price;
   document.getElementById("txtQuantityProducts1").innerHTML = product1.quantity;
+  document.getElementById("txtTotalValueProducts1").innerHTML = product1.totalValue;
+
+  // Output test - expected output 222.60
+  console.log("Test totalValue = quantiy * price & totalValue.toFixed(2) = " + product1.totalValue); 
 
   document.getElementById("txtProductIDProducts2").innerHTML = product2.id;
   document.getElementById("txtDescriptionProducts2").innerHTML = product2.description;
   document.getElementById("txtPriceProducts2").innerHTML = product2.price;
   document.getElementById("txtQuantityProducts2").innerHTML = product2.quantity;
+  document.getElementById("txtTotalValueProducts2").innerHTML = product2.totalValue;
 
   document.getElementById("txtProductIDProducts3").innerHTML = product3.id;
   document.getElementById("txtDescriptionProducts3").innerHTML = product3.description;
   document.getElementById("txtPriceProducts3").innerHTML = product3.price;
   document.getElementById("txtQuantityProducts3").innerHTML = product3.quantity;
+  document.getElementById("txtTotalValueProducts3").innerHTML = product3.totalValue;
 
   document.getElementById("txtProductIDProducts4").innerHTML = product4.id;
   document.getElementById("txtDescriptionProducts4").innerHTML = product4.description;
   document.getElementById("txtPriceProducts4").innerHTML = product4.price;
   document.getElementById("txtQuantityProducts4").innerHTML = product4.quantity;
+  document.getElementById("txtTotalValueProducts4").innerHTML = product4.totalValue;
 
   document.getElementById("txtProductIDProducts5").innerHTML = product5.id;
   document.getElementById("txtDescriptionProducts5").innerHTML = product5.description;
   document.getElementById("txtPriceProducts5").innerHTML = product5.price;
   document.getElementById("txtQuantityProducts5").innerHTML = product5.quantity;
+  document.getElementById("txtTotalValueProducts5").innerHTML = product5.totalValue;
 
 /*
 ; Service Table
