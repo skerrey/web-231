@@ -20,6 +20,7 @@
 ===========================================
 */
 
+// 
 class Product {
   constructor(id, description, price, quantity) {
     this.id = id;
@@ -60,11 +61,12 @@ class Employees {
 //   quantity: 10
 // }
 
-
+// Bind variables to divs
 let products = document.getElementById("products");
 let services = document.getElementById("services");
 let employees = document.getElementById("employees");
 
+// Change initial value to display none for divs, products, services, employees
 products.style.display = "none";
 services.style.display = "none";
 employees.style.display = "none";
@@ -75,10 +77,12 @@ document.getElementById("btnDisplayListing").onclick = function() {
   // Capture inputted value from txtMySelectList id & assign to variable choice
   let choice = document.getElementById("txtMySelectList").value;
 
+  // Switch case to choose between divs from option select against string values
   switch(choice) {
 
-    case "products": 
+    case "products": // Expected output products div
 
+      // Change display to block for products div
       products.style.display = "block";
       services.style.display = "none";
       employees.style.display = "none";
@@ -87,8 +91,9 @@ document.getElementById("btnDisplayListing").onclick = function() {
       
       break;
 
-    case "services":
+    case "services": // Expected output services div
 
+      // Change display to block for services div
       products.style.display = "none";
       services.style.display = "block";
       employees.style.display = "none";
@@ -97,8 +102,9 @@ document.getElementById("btnDisplayListing").onclick = function() {
 
       break;
 
-    case "employees": 
+    case "employees": // Expected output employees div
 
+      // Change display to block for employees div
       products.style.display = "none";
       services.style.display = "none";
       employees.style.display = "block";
@@ -109,7 +115,12 @@ document.getElementById("btnDisplayListing").onclick = function() {
 
     default:
 
-      console.log("no value selected"); // test
+      // All divs no display if select is selected
+      products.style.display = "none";
+      services.style.display = "none";
+      employees.style.display = "none";
+
+      console.log("no value selected"); // test for select option
 
   }
 }
