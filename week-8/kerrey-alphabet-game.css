@@ -35,3 +35,7 @@ body {
     width: 600px;
     margin: 3% auto 0;
 }
+
+#alphabet-results, #position-results {
+    text-align: center;
+}
