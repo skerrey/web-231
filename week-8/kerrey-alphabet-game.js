@@ -68,7 +68,7 @@ document.getElementById("btnFindLetter").onclick = function() {
 
 	// Testing if number = 1-26 & bind results
 	} else {
-
+ 
 		document.getElementById("alphabet-letter").innerHTML = letter.toUpperCase() + " is at position " + pos + " in the alphabet";
 
 	}
