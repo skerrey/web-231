@@ -62,12 +62,6 @@ document.getElementById("btnFindLetter").onclick = function() {
 	// Equate array position to letter variable
 	letter = alphabet[pos - 1]; //"pos - 1" makes "A = 1"
 
-	// Test pos & typeof pos
-	console.log("Entered number = " + pos + "\n" + "typeof number = " + typeof pos);
-
-	// Test letter array position
-	console.log("letter = " + letter);
-
 	// If else if loop testing if letter =/= numbers 1-26 & bind results
 	if (letter === undefined) {
 		
@@ -79,5 +73,7 @@ document.getElementById("btnFindLetter").onclick = function() {
 		document.getElementById("alphabet-letter").innerHTML = letter.toUpperCase() + " is at position " + pos + " in the alphabet";
 
 	}
-		
+	
+	// Output test of pos and letter
+	console.log("Entered number = " + pos + "\n" + "Letter = " + letter);
 }
