@@ -9,11 +9,10 @@
 ;   Script for the kerrey-alphabet-game.html file.
 ; Resources: 
 ;   JavaScript code was taken from "WEB 231 Assign_8.docx" 
-;   	Class names, constructor parameters
-;		& variable names provided by Prof Krasso.
-;   W3Schools Array
+;   	Class names, ids, & variable names provided by Prof Krasso.
+;   W3Schools Arrays
 ;       https://www.w3schools.com/js/js_arrays.asp
-;	MDN Array
+;	MDN Arrays
 ;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 ;   StackOverflow Character Arrays example by user insertusernamehere
 ;       https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string
