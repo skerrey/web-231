@@ -1,0 +1,37 @@
+/*
+============================================
+; Title: Assignment 8.2 Alphabet Game
+; File Name: kerrey-alphabet-game.css
+; Author: Professor Krasso
+; Date: 12 December 2021
+; Modified By: Seth Kerrey
+; Description: 
+;   Styling for the 
+;   kerrey-alphabet-game.html file.
+; Resources: 
+;   CSS style came from guidance in the:
+;       style guide,
+;       buwebdev repo/web-231, &
+;       "Web 231 Assign_8"
+;   Assignment instructions provided
+;   by Prof Krasso
+===========================================
+*/
+
+body {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+#form-results {
+    text-align: center;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card-example, #form-example, #form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
