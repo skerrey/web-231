@@ -32,16 +32,16 @@
 
 // Create character array of alphabet 
 let characterArray = "abcdefghijklmnopqrstuvwxyz";
-// Create array and assign to characterArray
+// Create alphabet array and assign to characterArray
 const alphabet = [...characterArray];
 
 // Test array
-console.log("alphabet Array = " + alphabet);
+console.log(alphabet);
 
 // Create variable with empty string
 let alphabetOutput = "";
 
-// For/in loop to build alphabet string w/ comma
+// For/in loop to build alphabet string with comma
 for (let x in alphabet) {
   	alphabetOutput += alphabet[x] + ", ";
 }
@@ -49,7 +49,7 @@ for (let x in alphabet) {
 // Test alphabetOutput array & typeof array
 console.log("alphabetOutput array = " + alphabetOutput + "\n" + "Type of alphabetOutput array = " + typeof alphabetOutput);
 
-// Bind to div alphabet/alphabet-results with uppercase & remove trailing comma
+// Bind to output div alphabet/alphabet-results with uppercase & remove trailing comma
 document.getElementById("alphabet-results").innerHTML = alphabetOutput.toUpperCase().slice(0, -2);
 
 // Register onclick event
@@ -59,7 +59,7 @@ document.getElementById("btnFindLetter").onclick = function() {
 	let pos = document.getElementById("txtPosition").value;
 	
 	// Equate array position to letter variable
-	letter = alphabet[pos];
+	letter = alphabet[pos - 1]; //"pos - 1" makes "A = 1"
 
 	// Test pos & typeof pos
 	console.log("Entered number = " + pos + "\n" + "typeof number = " + typeof pos);
@@ -67,10 +67,16 @@ document.getElementById("btnFindLetter").onclick = function() {
 	// Test letter array position
 	console.log("letter = " + letter);
 
+	// If else if loop testing if letter =/= numbers 1-26 & bind results
 	if (letter === undefined) {
-		document.getElementById("position-results").innerHTML = "There are not " + pos + " letters in the alphabet";
+		
+		document.getElementById("alphabet-letter").innerHTML = "There are not " + pos + " letters in the alphabet";
+
+	// Testing if number = 1-26 & bind results
 	} else {
-		document.getElementById("position-results").innerHTML = letter.toUpperCase() + " is at position " + pos + " in the alphabet";
+
+		document.getElementById("alphabet-letter").innerHTML = letter.toUpperCase() + " is at position " + pos + " in the alphabet";
+
 	}
 		
 }
