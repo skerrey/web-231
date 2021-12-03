@@ -32,6 +32,7 @@
 
 // Create character array of alphabet 
 let characterArray = "abcdefghijklmnopqrstuvwxyz";
+
 // Create alphabet array and assign to characterArray
 const alphabet = [...characterArray];
 
@@ -43,7 +44,7 @@ let alphabetOutput = "";
 
 // For/in loop to build alphabet string with comma
 for (let x in alphabet) {
-  	alphabetOutput += alphabet[x] + ", ";
+  alphabetOutput += alphabet[x] + ", ";
 }
 
 // Test alphabetOutput array & typeof array
