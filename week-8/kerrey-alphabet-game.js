@@ -9,23 +9,23 @@
 ;   Script for the kerrey-alphabet-game.html file.
 ; Resources:
 ;   JavaScript code was taken from "WEB 231 Assign_8.docx"
-;   		Class names, ids, & variable names provided by Prof Krasso.
+;   	Class names, ids, & variable names provided by Prof Krasso.
 ;   W3Schools Arrays
-;				https://www.w3schools.com/js/js_arrays.asp
-;		MDN Arrays
-;				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+;		https://www.w3schools.com/js/js_arrays.asp
+;	MDN Arrays
+;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 ;   StackOverflow Character Arrays example by user insertusernamehere
-;				https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string
+;		https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string
 ;   W3Schools For in Loop
-;				https://www.w3schools.com/js/js_loop_forin.asp
+;		https://www.w3schools.com/js/js_loop_forin.asp
 ; 	MDN Typeof
-;				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-;		MDN toUpperCase()
-;				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+;	MDN toUpperCase()
+;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ; 	MDN String - new line in console.log "\n"
-;				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-;		MDN undefined
-;				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
+;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+;	MDN undefined
+;		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ===========================================
 */
 
@@ -43,7 +43,7 @@ let alphabetOutput = "";
 
 // For/in loop to build alphabet string with comma
 for (let x in alphabet) {
-  alphabetOutput += alphabet[x] + ", ";
+  	alphabetOutput += alphabet[x] + ", ";
 }
 
 // Test alphabetOutput array & typeof array
