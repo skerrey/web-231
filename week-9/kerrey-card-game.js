@@ -29,6 +29,8 @@
 ;       https://www.w3schools.com/css/css_grid.asp
 ;   W3Schools Math.floor()
 ;       https://www.w3schools.com/jsref/jsref_floor.asp
+;   W3Schools inline CSS
+;       https://www.w3schools.com/css/css_howto.asp
 ===========================================
 */
 
