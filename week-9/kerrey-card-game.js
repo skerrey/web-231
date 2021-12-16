@@ -86,7 +86,7 @@ document.getElementById("btnDealCards").onclick = function() {
         switch(card.suit) {
 
             case "Hearts":
-                cardOutputWithIcon += buildPlayingCard(cards, "mdi", "mdi-heart", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-heart", "red", "red");
                 console.log("hearts");
                 break;
             case "Diamonds":
@@ -104,7 +104,8 @@ document.getElementById("btnDealCards").onclick = function() {
             default:
                 console.log("Default");
         }
-
     }
+
+    cardOutputWithIcon = document.getElementById("player-card-container").innerHTML;
 
 }
