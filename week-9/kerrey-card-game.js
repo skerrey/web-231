@@ -40,7 +40,7 @@ let CARD_COUNT = 52;
 
 // Assign array cards, faces, suits
 const cards = [];
-const faces = ["A",2,3,4,5,6,7,8,9,10,"J","Q","K"];
+const faces = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
 const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
 // Function getDeckOfCards, code provided by Prof Krasso
@@ -48,41 +48,40 @@ function getDeckOfCards() {
     for (let count=0; count<this.CARD_COUNT; count++) {
         this.cards[count] = new Card(this.faces[count % 13], this.suits[Math.floor(count / 13)]);
     }
-    return getDeckOfCards;
 }
 
 function shuffle() {
-    for (let count=0; count<this.CARD_COUNT; count++) {
+    for (let firstCard=0; firstCard<this.CARD_COUNT; firstCard++) {
         let tempCard = this.cards[firstCard];
         let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
-        cards[firstCard] = cards[secondCard];
-        cards[secondCard] = tempCard;
+        this.cards[firstCard] = this.cards[secondCard];
+        this.cards[secondCard] = tempCard;
     }
-    return shuffle;
 }
 
 function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
-    let string = `
-    <div class="${card} player-card">
+    return `
+    <div class="card player-card">
         <div class="card-title" style="text-align:left;font-size:20px;padding-left:10px;color:${faceColor}">
+        ${card.face}
             <div class="card-content" style="font:28px;padding-bottom:25px;">
+
                 <span class="${suitIcon}" style="color:${suitColor}">
                 </span>
             </div>
         </div>
     </div>        
-    `
-    return string;
+    `;
 } 
 
 // Register onclick event
 document.getElementById("btnDealCards").onclick = function() {
 
-    let dealer = {cards};
-    shuffle();
+    let dealer = new Dealer();
+    shuffle(dealer);
     let cardOutputWithIcon = "";
 
-    for(let x of dealer.cards) {
+    for(card of dealer.card) {
         switch(card.suit) {
 
             case "Hearts":
