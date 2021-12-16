@@ -41,3 +41,10 @@ body {
 .player-card {
     text-align: center;
 }
+
+#player-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+}
