@@ -16,6 +16,8 @@
 ;   The classes and id's were taken from the CSS style guide: 
 ;       "Web 231 Assign_9.docx" provided by Prof Krasso
 ;       https://github.com/buwebdev/web-231/tree/master/week-0 
+;   W3Schools inline CSS
+;       https://www.w3schools.com/css/css_howto.asp
 ===========================================
 -->        
         <title>WEB 231 – Enterprise JavaScript I</title>
@@ -29,6 +31,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     </head>
     <body>
 
@@ -38,18 +43,9 @@
 
             <!-- Card container for user input -->
             <div id="card-container">
-
                 <div class="card">
                     <div class="card-title">Card Dealer</div>
                     <div class="card-content">
-                        <div class="form">
-
-                            <!-- Form for input -->
-                            <div class="form-field">
-                                <label for="txtPosition">Alphabet Letter Position</label>
-                                <input type="text" class="input" id="txtPosition" name="myPosition" />
-                            </div>
-
                             <!-- Button -->
                             <div class="form-field">
                                 <button class="btn btn-primary full-width" id="btnDealCards">Deal Cards</button>
@@ -63,7 +59,21 @@
             <!-- Return link to landing page -->
             <a href="../index.html" class="return-home">Return</a>
 
-            
+            <!--  -->
+            <div id="player-card-container">
+
+                <div class="card">
+                    <div class="card-title">Shuffled Cards</div>
+                    <div class="card-content">
+                        
+                        <!-- Card div player-card -->
+                        <div class="player-card">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </body>
