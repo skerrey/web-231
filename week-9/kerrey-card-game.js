@@ -48,13 +48,12 @@ function getDeckOfCards() {
     for (let count=0; count<this.CARD_COUNT; count++) {
         this.cards[count] = new Card(this.faces[count % 13], this.suits[Math.floor(count / 13)]);
     }
+    return getDeckOfCards;
 }
-
 
 function shuffle() {
     for (let count=0; count<this.CARD_COUNT; count++) {
         let tempCard = this.cards[firstCard];
-        
         let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
         cards[firstCard] = cards[secondCard];
         cards[secondCard] = tempCard;
@@ -62,33 +61,45 @@ function shuffle() {
     return shuffle;
 }
 
-function buildPlayerCard(card, suitIcon, faceColor, suitColor) {
-    `<div class=”card player-card”><div class=”card-title” style=”color: ${faceColor}”>${card.face}</div></div> `;
-    
-}
+function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
+    let string = `
+    <div class="${card} player-card">
+        <div class="card-title" style="text-align:left;font-size:20px;padding-left:10px;color:${faceColor}">
+            <div class="card-content" style="font:28px;padding-bottom:25px;">
+                <span class="${suitIcon}" style="color:${suitColor}">
+                </span>
+            </div>
+        </div>
+    </div>        
+    `
+    return string;
+} 
 
 // Register onclick event
 document.getElementById("btnDealCards").onclick = function() {
 
-    let Dealer = {cards};
+    let dealer = {cards};
     shuffle();
-    function named() {}
     let cardOutputWithIcon = "";
-    for(let x of Dealer.cards) {
+
+    for(let x of dealer.cards) {
         switch(card.suit) {
 
             case "Hearts":
-                cardOutputWithIcon += buildPlayingCard(card, "mdi", "mdi-heart", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(cards, "mdi", "mdi-heart", "red", "red");
                 console.log("hearts");
                 break;
             case "Diamonds":
-                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamonds", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-cards-diamonds", "red", "red");
+                console.log("2");
                 break;
             case "Clubs":
-                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club", "black", "black");
+                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-cards-club", "black", "black");
+                console.log("3");
                 break;
             case "Spades":
-                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-spade", "black", "black");
+                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-spade", "black", "black");
+                console.log("4");
                 break;
             default:
                 console.log("Default");
@@ -97,4 +108,3 @@ document.getElementById("btnDealCards").onclick = function() {
     }
 
 }
-
