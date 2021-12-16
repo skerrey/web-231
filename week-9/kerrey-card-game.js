@@ -78,26 +78,25 @@ function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
 document.getElementById("btnDealCards").onclick = function() {
 
     let dealer = new Dealer();
-    shuffle(dealer);
+    shuffle();
     let cardOutputWithIcon = "";
-
-    for(card of dealer.card) {
+    for(let card of cards) {
         switch(card.suit) {
 
             case "Hearts":
-                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-heart", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-heart", "red", "red");
                 console.log("hearts");
                 break;
             case "Diamonds":
-                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-cards-diamonds", "red", "red");
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamonds", "red", "red");
                 console.log("2");
                 break;
             case "Clubs":
-                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-cards-club", "black", "black");
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club", "black", "black");
                 console.log("3");
                 break;
             case "Spades":
-                cardOutputWithIcon += buildPlayingCard(cards, "mdi mdi-spade", "black", "black");
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-spade", "black", "black");
                 console.log("4");
                 break;
             default:
